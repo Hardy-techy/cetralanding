@@ -6,7 +6,7 @@ const features = [
     {
         icon: <Wallet size={32} className="accent-text" />,
         title: "Supply & Earn",
-        description: "Deposit assets like PC, WETH, and USDC to earn compounding interest instantly."
+        description: "Deposit assets like mBTC, PC, WETH, and USDC to earn compounding interest instantly."
     },
     {
         icon: <PieChart size={32} className="accent-text" />,
