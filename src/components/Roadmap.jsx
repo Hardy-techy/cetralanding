@@ -23,8 +23,8 @@ const phases = [
     {
         phase: "Phase 4",
         title: "Expansion",
-        items: ["Mainnet Launch", "Comprehensive Audits", "Push Chain Deployment", "MIDL Deployment"],
-        desc: "Full deployment on Push Chain & MIDL Mainnets to ensure scalability, security, and mass adoption."
+        items: ["Mainnet Launch", "Comprehensive Audits", "Push Chain Deployment"],
+        desc: "Full deployment on Push Chain Mainnet ensures scalability, security, and mass adoption."
     }
 ];
 

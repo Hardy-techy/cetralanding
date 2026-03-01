@@ -6,7 +6,7 @@ const steps = [
     {
         icon: <Landmark size={32} />,
         title: "1. Supply Assets",
-        description: "Deposit your mBTC, PC, WETH, or USDC into Cetra's secure lending pools."
+        description: "Deposit your PC, WETH, or USDC into Cetra's secure lending pools."
     },
     {
         icon: <ArrowLeftRight size={32} />,

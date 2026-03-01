@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import Lenis from '@studio-freight/lenis'
 import Hero from './components/Hero'
-import SupportedChains from './components/SupportedChains'
 import Features from './components/Features'
 import Footer from './components/Footer'
 
@@ -40,7 +39,6 @@ function App() {
       <div className="grain-overlay"></div>
       <main>
         <Hero />
-        <SupportedChains />
         <Features />
         <HowItWorks />
         <Tokenomics />

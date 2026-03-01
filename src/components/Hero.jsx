@@ -1,26 +1,9 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import CetraLogo from './CetraLogo';
 
 const Hero = () => {
-    const [network, setNetwork] = useState('Push'); // 'Push' or 'MIDL'
-
-    const pushAssets = [
-        { symbol: "PC", name: "Push Chain", apy: "6%", image: "/PC.png", color: "#ec4899" },
-        { symbol: "WETH", name: "Ethereum", apy: "1.25%", image: "/ethereum.png", color: "#627EEA" },
-        { symbol: "USDC", name: "USD Coin", apy: "5%", image: "/usdc.png", color: "#2775CA" },
-        { symbol: "CET", name: "Cetra Gov", apy: "6.6%", image: "/cet.png", color: "#8B5CF6", highlight: true }
-    ];
-
-    const midlAssets = [
-        { symbol: "mBTC", name: "Bitcoin", apy: "3%", image: "/bitcoin.png", color: "#F7931A" },
-        { symbol: "USDC", name: "USD Coin", apy: "5%", image: "/usdc.png", color: "#2775CA" },
-        { symbol: "WETH", name: "Ethereum", apy: "1.25%", image: "/ethereum.png", color: "#627EEA" },
-        { symbol: "CET", name: "Cetra Gov", apy: "6%", image: "/cet.png", color: "#8B5CF6", highlight: true }
-    ];
-
-    const currentAssets = network === 'Push' ? pushAssets : midlAssets;
     return (
         <section style={{
             minHeight: '100vh',
@@ -97,8 +80,8 @@ const Hero = () => {
                         borderLeft: '2px solid rgba(255,255,255,0.1)',
                         paddingLeft: '1.5rem'
                     }}>
-                        Supply assets, borrow against them, and earn optimized yields on Push Chain & MIDL.
-                        Cetra allows you to leverage your <span style={{ color: 'white' }}>mBTC, PC, WETH, USDC and CET</span> holdings without selling them.
+                        Suppy assets, borrow against them, and earn optimized yields on Push Chain.
+                        Cetra allows you to leverage your <span style={{ color: 'white' }}>PC, WETH, and CET</span> holdings without selling them.
                     </p>
 
                     <motion.div
@@ -107,152 +90,73 @@ const Hero = () => {
                         transition={{ delay: 0.8, duration: 0.5 }}
                         style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}
                     >
-                        <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-                            <motion.a
-                                href="https://testnet.cetra.app"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn"
-                                whileHover={{ scale: 1.02, background: 'rgba(255, 255, 255, 0.05)', borderColor: 'white' }}
-                                whileTap={{ scale: 0.98 }}
-                                style={{
-                                    background: 'transparent',
-                                    color: 'white',
-                                    padding: '1.2rem 2.8rem',
-                                    border: '1px solid transparent',
-                                    fontSize: '0.9rem',
-                                    fontWeight: 600,
-                                    cursor: 'pointer',
-                                    borderRadius: '12px',
-                                    textDecoration: 'none',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '1rem',
-                                    transition: 'all 0.4s ease',
-                                    letterSpacing: '0.1em',
-                                    textTransform: 'uppercase'
-                                }}
-                            >
-                                <img src="/PC.png" alt="Push" style={{ width: '28px', height: '28px' }} />
-                                Launch App on Push
-                            </motion.a>
-                            <motion.a
-                                href="https://midl.cetra.app"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn"
-                                whileHover={{ scale: 1.02, background: 'rgba(255, 255, 255, 0.05)', borderColor: 'white' }}
-                                whileTap={{ scale: 0.98 }}
-                                style={{
-                                    background: 'transparent',
-                                    color: 'white',
-                                    padding: '1.2rem 2.8rem',
-                                    border: '1px solid transparent',
-                                    fontSize: '0.9rem',
-                                    fontWeight: 600,
-                                    cursor: 'pointer',
-                                    borderRadius: '12px',
-                                    textDecoration: 'none',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '1rem',
-                                    transition: 'all 0.4s ease',
-                                    letterSpacing: '0.1em',
-                                    textTransform: 'uppercase'
-                                }}
-                            >
-                                <img src="/midllogo.jpg" alt="MIDL" style={{ width: '28px', height: '28px', borderRadius: '50%' }} />
-                                Launch App on MIDL
-                            </motion.a>
+                        <motion.a
+                            href="https://testnet.cetra.app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn"
+                            whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(91,104,223,0.5)' }}
+                            whileTap={{ scale: 0.95 }}
+                            style={{
+                                background: 'white',
+                                color: 'black',
+                                padding: '1.2rem 2.5rem',
+                                border: '2px solid #5b68df',
+                                fontSize: '1.1rem',
+                                fontWeight: 700,
+                                cursor: 'pointer',
+                                borderRadius: '12px',
+                                textDecoration: 'none',
+                                display: 'inline-block'
+                            }}
+                        >
+                            Start Earning
+                        </motion.a>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem', justifyContent: 'center' }}>
+                            <span style={{ fontSize: '0.8rem', color: '#666', textTransform: 'uppercase' }}>Total Value Locked</span>
+                            <span style={{ fontSize: '1.2rem', fontWeight: 700, fontFamily: "'Syne', sans-serif" }}>$63,020</span>
                         </div>
                     </motion.div>
                 </div>
 
-                {/* RIGHT: Clean Asset Stack & Toggle */}
+                {/* RIGHT: Clean Asset Stack */}
                 <div style={{ position: 'relative', height: '600px', display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingLeft: '2rem' }}>
 
-                    {/* Network Toggle */}
-                    <div style={{
-                        position: 'absolute',
-                        top: '5%',
-                        left: '2rem',
-                        zIndex: 100,
-                        display: 'flex',
-                        background: 'rgba(255,255,255,0.05)',
-                        border: '1px solid rgba(255,255,255,0.1)',
-                        borderRadius: '30px',
-                        padding: '4px',
-                        gap: '4px'
-                    }}>
-                        <button
-                            onClick={() => setNetwork('Push')}
-                            style={{
-                                background: network === 'Push' ? 'rgba(255, 255, 255, 0.1)' : 'transparent',
-                                border: network === 'Push' ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid transparent',
-                                color: network === 'Push' ? '#fff' : '#888',
-                                boxShadow: network === 'Push' ? '0 4px 12px rgba(0,0,0,0.1)' : 'none',
-                                padding: '0.6rem 1.2rem',
-                                borderRadius: '24px',
-                                cursor: 'pointer',
-                                fontWeight: 500,
-                                transition: 'all 0.3s ease',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '0.5rem',
-                                fontSize: '0.9rem'
-                            }}
-                        >
-                            <img src="/PC.png" alt="Push" style={{ width: '18px', height: '18px', filter: network === 'Push' ? 'none' : 'grayscale(100%) opacity(0.5)' }} />
-                            Push Chain
-                        </button>
-                        <button
-                            onClick={() => setNetwork('MIDL')}
-                            style={{
-                                background: network === 'MIDL' ? 'rgba(255, 255, 255, 0.1)' : 'transparent',
-                                border: network === 'MIDL' ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid transparent',
-                                color: network === 'MIDL' ? '#fff' : '#888',
-                                boxShadow: network === 'MIDL' ? '0 4px 12px rgba(0,0,0,0.1)' : 'none',
-                                padding: '0.6rem 1.2rem',
-                                borderRadius: '24px',
-                                cursor: 'pointer',
-                                fontWeight: 500,
-                                transition: 'all 0.3s ease',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '0.5rem',
-                                fontSize: '0.9rem'
-                            }}
-                        >
-                            <img src="/midllogo.jpg" alt="MIDL" style={{ width: '18px', height: '18px', borderRadius: '50%', filter: network === 'MIDL' ? 'none' : 'grayscale(100%) opacity(0.5)' }} />
-                            MIDL
-                        </button>
-                    </div>
-
                     {/* The Stack */}
-                    <div style={{ position: 'relative', marginTop: '4rem' }}>
-                        <AnimatePresence mode="wait">
-                            <motion.div
-                                key={network}
-                                initial={{ opacity: 0, x: 20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                exit={{ opacity: 0, x: -20 }}
-                                transition={{ duration: 0.3 }}
-                                style={{ position: 'relative' }}
-                            >
-                                {currentAssets.map((asset, index) => (
-                                    <StackedCard
-                                        key={asset.symbol}
-                                        symbol={asset.symbol}
-                                        name={asset.name}
-                                        apy={asset.apy}
-                                        image={asset.image}
-                                        color={asset.color}
-                                        index={index}
-                                        highlight={asset.highlight}
-                                    />
-                                ))}
-                            </motion.div>
-                        </AnimatePresence>
+                    <div style={{ position: 'relative' }}>
+                        <StackedCard
+                            symbol="PC"
+                            name="Push Chain"
+                            apy="6%"
+                            image="/PC.png"
+                            color="#ec4899"
+                            index={0}
+                        />
+                        <StackedCard
+                            symbol="WETH"
+                            name="Ethereum"
+                            apy="1.25%"
+                            image="/ethereum.png"
+                            color="#627EEA"
+                            index={1}
+                        />
+                        <StackedCard
+                            symbol="USDC"
+                            name="USD Coin"
+                            apy="5%"
+                            image="/usdc.png"
+                            color="#2775CA"
+                            index={2}
+                        />
+                        <StackedCard
+                            symbol="CET"
+                            name="Cetra Gov"
+                            apy="6.6%"
+                            image="/cet.png"
+                            color="#8B5CF6"
+                            index={3}
+                            highlight
+                        />
                     </div>
 
                     {/* Background Decorative Line */}

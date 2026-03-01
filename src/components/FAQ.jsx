@@ -4,8 +4,8 @@ import { ChevronDown } from 'lucide-react';
 
 const faqs = [
     {
-        question: "What is Cetra?",
-        answer: "Cetra is a decentralized lending protocol natively built on both Push Chain and MIDL. It allows users to supply assets as collateral to earn yield and borrow other assets against their position."
+        question: "What makes Cetra different?",
+        answer: "Cetra is built natively on Push Chain, offering sub-second transaction speeds and cross-chain compatibility, ensuring you get the best rates with minimal latency."
     },
     {
         question: "Is my collateral safe?",

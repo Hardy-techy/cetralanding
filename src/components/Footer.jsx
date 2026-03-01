@@ -12,9 +12,8 @@ const Footer = () => {
                     <div style={{ marginBottom: '1.5rem' }}>
                         <CetraLogo size={24} />
                     </div>
-                    <p style={{ color: '#888', lineHeight: 1.6, marginBottom: '2rem' }}>
-                        The next-generation lending protocol natively built on Push Chain and MIDL.
-                        Experience seamless borrowing and yield optimization.
+                    <p style={{ color: '#666', lineHeight: 1.6, maxWidth: '280px' }}>
+                        The next generation lending protocol on Push Chain. Unlock liquidity without selling your assets.
                     </p>
                 </div>
 
