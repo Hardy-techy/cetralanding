@@ -32,7 +32,7 @@ const Footer = () => {
                     <h4 style={{ fontWeight: 700, marginBottom: '1.5rem', fontFamily: "'Syne', sans-serif" }}>Community</h4>
                     <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
                         <li><FooterLink href="#">Discord</FooterLink></li>
-                        <li><FooterLink href="#">Twitter</FooterLink></li>
+                        <li><FooterLink href="https://x.com/Cetra_app" target="_blank" rel="noopener noreferrer">Twitter</FooterLink></li>
                         <li><FooterLink href="#">Blog</FooterLink></li>
                         <li><FooterLink href="#">Brand Kit</FooterLink></li>
                     </ul>
@@ -46,9 +46,10 @@ const Footer = () => {
     );
 };
 
-const FooterLink = ({ href, children }) => (
+const FooterLink = ({ href, children, ...props }) => (
     <motion.a
         href={href}
+        {...props}
         style={{ color: '#aaa', textDecoration: 'none', display: 'inline-block' }}
         whileHover={{ color: 'white', x: 5 }}
         transition={{ duration: 0.2 }}
